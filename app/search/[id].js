@@ -9,7 +9,7 @@ import {
 import { Stack, useRouter, useSearchParams } from "expo-router";
 import { Text, SafeAreaView } from "react-native";
 import axios from "axios";
-import { RAPID_API_KEY } from "@env";
+import { EXPO_PUBLIC_RAPID_API_KEY } from "@env";
 
 import { ScreenHeaderBtn, NearbyJobCard } from "../../components";
 import { COLORS, icons, SIZES } from "../../constants";
@@ -36,7 +36,7 @@ const JobSearch = () => {
         page: page.toString(),
       },
       headers: {
-        "X-RapidAPI-Key": RAPID_API_KEY,
+        "X-RapidAPI-Key": EXPO_PUBLIC_RAPID_API_KEY,
         "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
       },
     };
